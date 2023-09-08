@@ -7,7 +7,7 @@ dotenv.config();
 
 const slackApp = new Slack.App({
   signingSecret: "55a52b16e490499b56a424db1f7076a0",
-  token: "xoxb-5872869788036-5870567588258-y7cJij4UQQMW7yGKaH4n6eR8",
+  token: process.env.SLACK_BOT_TOKEN,
 });
 // Handle incoming data from machines
 exports.updateMachine = async (req, res) => {
